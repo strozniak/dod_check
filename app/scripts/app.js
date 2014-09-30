@@ -8,19 +8,17 @@
  *
  * Main module of the application.
  */
-angular
+var app =angular
   .module('doDappApp', [
     'ngRoute'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -42,3 +40,28 @@ angular
         redirectTo: '/'
       });
   });
+
+  app.directive('header', function() { 
+    return {
+      restrict: 'E',
+      templateUrl:'views/header.html'
+    }; 
+  });
+
+  app.directive('footer', function() { 
+    return {
+      restrict: 'E',
+      templateUrl:'views/footer.html'
+    }; 
+  });
+
+    app.directive('content', function() { 
+    return {
+      restrict: 'E',
+      templateUrl:'views/content.html'
+    }; 
+  });
+
+
+
+
