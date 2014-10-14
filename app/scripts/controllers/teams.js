@@ -9,9 +9,9 @@
  */
 angular.module('doDappApp')
   .controller('TeamsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.teams = [
+      'Team A',
+      'Code Busters',
+      'Red Builders'
     ];
   });

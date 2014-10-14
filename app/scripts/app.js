@@ -44,7 +44,8 @@ var app =angular
   app.directive('header', function() { 
     return {
       restrict: 'E',
-      templateUrl:'views/header.html'
+      templateUrl:'views/header.html',
+      controller: 'TeamsCtrl'
     }; 
   });
 
@@ -61,7 +62,3 @@ var app =angular
       templateUrl:'views/content.html'
     }; 
   });
-
-
-
-
